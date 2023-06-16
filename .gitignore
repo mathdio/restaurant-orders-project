@@ -145,3 +145,6 @@ dmypy.json
 
 .vscode
 .markdownlint.json
+
+# Code Runner Extension
+tempCodeRunnerFile.py
