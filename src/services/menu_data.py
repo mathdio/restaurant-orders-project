@@ -7,7 +7,7 @@ from models.ingredient import Ingredient
 
 class MenuData:
     def __init__(self, source_path: str) -> None:
-        dishes = set()
+        self.dishes = set()
 
         menu_df = pd.read_csv(source_path)
         for dish in menu_df.groupby("dish"):
@@ -21,7 +21,7 @@ class MenuData:
                 dish_instance.add_ingredient_dependency(
                     ingredient_instance, amount
                 )
-                print(dish_instance.get_ingredients())
+            self.dishes.add(dish_instance)
 
 
 menu = MenuData("tests/mocks/menu_base_data.csv")
