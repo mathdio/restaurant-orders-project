@@ -39,13 +39,19 @@ class MenuBuilder:
         return pd.DataFrame(menu)
 
     def get_main_menu(self, restriction=None) -> pd.DataFrame:
-        if restriction is None:
-            return self.generate_dataframe(self.menu_data.dishes)
-        else:
-            dinamic_menu = set()
+        menu = set()
+        for dish in self.menu_data.dishes:
+            if not restriction or restriction not in dish.get_restrictions():
+                menu.add(dish)
+        return self.generate_dataframe(menu)
 
-            for dish in self.menu_data.dishes:
-                if restriction not in dish.get_restrictions():
-                    dinamic_menu.add(dish)
+        # if restriction is None:
+        #     return self.generate_dataframe(self.menu_data.dishes)
+        # else:
+        #     dinamic_menu = set()
 
-            return self.generate_dataframe(dinamic_menu)
+        #     for dish in self.menu_data.dishes:
+        #         if restriction not in dish.get_restrictions():
+        #             dinamic_menu.add(dish)
+
+        #     return self.generate_dataframe(dinamic_menu)
