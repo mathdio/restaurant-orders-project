@@ -40,18 +40,15 @@ class MenuBuilder:
 
     def get_main_menu(self, restriction=None) -> pd.DataFrame:
         menu = set()
+        print(self.inventory.inventory)
         for dish in self.menu_data.dishes:
-            if not restriction or restriction not in dish.get_restrictions():
+            if (
+                not restriction or restriction not in dish.get_restrictions()
+            ) and (self.inventory.check_recipe_availability(dish.recipe)):
+                self.inventory.consume_recipe(dish.recipe)
                 menu.add(dish)
         return self.generate_dataframe(menu)
 
-        # if restriction is None:
-        #     return self.generate_dataframe(self.menu_data.dishes)
-        # else:
-        #     dinamic_menu = set()
 
-        #     for dish in self.menu_data.dishes:
-        #         if restriction not in dish.get_restrictions():
-        #             dinamic_menu.add(dish)
-
-        #     return self.generate_dataframe(dinamic_menu)
+builder = MenuBuilder()
+builder.get_main_menu()
