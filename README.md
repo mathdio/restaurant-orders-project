@@ -3,9 +3,11 @@
 > Although this README has some solid guidance, more info is yet to be added. The "About this project" section is incomplete, for example.
 
 # 🍽️ Restaurant Orders
-developed as a [Trybe](https://www.betrybe.com) Project.
+A restaurant menu generator feature as solution, developed as a [Trybe](https://www.betrybe.com) Project.
 
 ## 💻 About this project
+This application was developed as a solution for restaurant dynamic menu generation. The feature generate menu based on dietary restrictions and stock ingredients availability.
+
 Some files may have been provided by [Trybe](https://www.betrybe.com) to accelerate the application development start.
 
 ## 🛠️ Built with
