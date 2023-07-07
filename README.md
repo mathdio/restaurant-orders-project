@@ -8,10 +8,16 @@ A restaurant menu generator feature as solution, developed as a [Trybe](https://
 ## 💻 About this project
 This application was developed as a solution for restaurant dynamic menu generation. The feature generate menu based on dietary restrictions and stock ingredients availability.
 
-Some files may have been provided by [Trybe](https://www.betrybe.com) to accelerate the application development start.
+Some files have been provided by [Trybe](https://www.betrybe.com) to accelerate the application development start, as well some classes was already implemented in order to assess testing skills.
 
 ## 🛠️ Built with
 <a href="https://docs.python.org/3/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /></a>
+
+## 🎯 Used skills
+- Hashmaps concepts usage by using Python's data structures: Dict and Set.
+- Usage of Pandas (Python Data Analysis Library) and its data structure DataFrame.
+- Object-Oriented Programming principles.
+- Software testing.
 
 ## 🏁 Getting started
 ### 🐍 Installing Python 3
